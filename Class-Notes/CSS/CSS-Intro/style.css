@@ -1,0 +1,27 @@
+body {
+    height: 200vh;
+}
+/* The h1 below is referred to as the "Selector". It winstructs the CSS to apply the following lines of styles to the selected elements */
+/* The entire block below represents a declaration */
+h1 {
+    /* background-color in the statement below is referred to as the "Property" and red is referred to as the value */
+    background-color: red;
+    border: 3px solid blue;
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 25vw;
+    margin: 30px auto;
+}
+
+/* The declaration below will select our list */
+/* .myList {} */
+ul.my-list {
+    border: 2px dotted green;
+}
+
+/* The declaration below will select the second itme in our list using its ID */
+#item-two {
+    border: 3px solid red;
+}
