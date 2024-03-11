@@ -67,3 +67,142 @@ console.log("JavaScript is running...");
 // console.log(car.color);
 
 // ------------ Functions ------------
+
+// Function Intro
+// We want to create a function that will take 2 numbers as inputs, and return the sum of those numbers
+// function sum(a, b) {
+//   // a and b are our inputs
+//   //   debugger;
+//   console.log(a + b);
+//   let sum = a + b;
+//   return sum; // returns the value of the sum variable to the caller (invoker)
+// }
+
+// let sumOfFourAndTwo = sum(4, 2);
+// sum(8, 10);
+// sum(4, 12);
+
+// console.log(sumOfFourAndTwo + 10);
+
+// console.log(sumDec(3, 4));
+// console.log(sumEx(6, 4));
+// console.log(sumArr(10, 4));
+
+// Function Declaration -> Hoisted
+function sumDec(a, b) {
+  return a + b;
+}
+// Function Expression
+const sumEx = function (a, b) {
+  return a + b;
+};
+// Arrow Function
+const sumArr = (a, b) => a + b; // Implicit Returns
+
+// let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let evenNumbers = nums.filter((num) => num % 2 == 0);
+// console.log(evenNumbers);
+
+// Scope refers to the visibility of variables in different components of your code.
+
+// function newScope() {
+//   // Creating a new blocked scope
+//   let num = 10;
+// }
+// if (true) {
+//   let num2 = 5;
+// }
+// console.log(num);
+// console.log(num2);
+
+// Closures
+// function func1(a, b) {
+//   function func2(c) {
+//     console.log(a, b, c); // Inner function can see and modify outer function's variables
+//     return c;
+//   }
+//   func2(10);
+//   console.log(c); // Outer function cannot see the inner functions' variables
+// }
+
+// func1(2, 4);
+
+// let globalVar = "Hello Worlds!"; // Global Scope when there are no curly braces
+
+// function vendingMachine() {
+//   // Inventory of snacks and drinks
+//   let inventory = {
+//     S1: { item: "Coca-Cola", count: 2 },
+//     C1: { item: "Ruffles", count: 2 },
+//     S2: { item: "Pepsi", count: 2 },
+//     C2: { item: "Doritos", count: 2 },
+//   };
+
+//   // Function to check and dispense item from machine
+//   function dispenseItem(code, callbackFn) {
+//     // 'S1', handleResponse
+//     // Check if inventory includes requested item
+//     if (inventory[code] && inventory[code].count > 0) {
+//       inventory[code].count--; // Decrement the count
+//       // 'Dispense' Item
+//       callbackFn(null, `Dispensing ${inventory[code].item}...Enjoy!`); // handleResponse()
+//     } else {
+//       callbackFn("Item not available", null); // handleResponse()
+//     }
+//   }
+//   return {
+//     selectItem: function (code, callback) {
+//       // code = 'S1', callback = handleResponse
+//       dispenseItem(code, callback); // code = 'S1', callback = handleResponse
+//     },
+//     inventoryStatus: function () {
+//       return inventory;
+//     },
+//   };
+// }
+
+// function handleResponse(err, result) {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(result);
+//   }
+// }
+
+// const machine = vendingMachine();
+// machine = {
+//     selectItem: fn(),
+//     inventoryStatus: fn(),
+// }
+
+// machine.selectItem("S1", handleResponse);
+// machine.selectItem("S1", handleResponse);
+// machine.selectItem("S1", handleResponse);
+// machine.selectItem("S1", handleResponse);
+// machine.selectItem("S2", handleResponse);
+// machine.selectItem("S2", handleResponse);
+// machine.selectItem("S2", handleResponse);
+// machine.selectItem("S2", handleResponse);
+// machine.selectItem("C1", handleResponse);
+// machine.selectItem("C1", handleResponse);
+// machine.selectItem("C1", handleResponse);
+// machine.selectItem("C1", handleResponse);
+// machine.selectItem("C1", handleResponse);
+// machine.selectItem("C1", handleResponse);
+// machine.selectItem("C2", handleResponse);
+// machine.selectItem("C2", handleResponse);
+// machine.selectItem("C2", handleResponse);
+// machine.selectItem("C2", handleResponse);
+// machine.selectItem("C2", handleResponse);
+// machine.selectItem("C2", handleResponse);
+// machine.selectItem("C2", handleResponse);
+// machine.selectItem("C2", handleResponse);
+// console.log(machine.inventoryStatus());
+
+// function sumToTen(a, sum) {
+//   if (sum >= 10) return sum;
+//   sum += a;
+//   return sumToTen(a + 1, sum);
+// }
+
+// console.log(sumToTen(1, 0));
