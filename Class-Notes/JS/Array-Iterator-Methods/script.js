@@ -4,7 +4,7 @@ console.log("Script is running...");
 
 // The for loop takes 3 expressions:
 // 1: The counting/reference variable
-// 2: The condition with whic the loop will terminate
+// 2: The condition with which the loop will terminate
 // 3: The update to the counting/reference variable
 // for (let i = 0; i < nums.length; i++) {
 // A for loop means that we want to repeatedly execute the block of code inside the loop an arbitrary number of times
