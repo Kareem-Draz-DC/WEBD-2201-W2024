@@ -20,10 +20,14 @@
     <form
       id="event-form"
       class="event-form"
-      onsubmit="handleFormSubmit(); return false;"
+      action="mailto:someone@example.com"
+      method="post"
+      enctype="text/plain"
     >
+      <!-- onsubmit="handleFormSubmit(); return false;" -->
       <label for="eventName">Event Name:</label>
       <input type="text" name="eventName" autocomplete="off" />
+      <!-- oninput="clearFormWarning('eventName')" -->
       <label for="eventDetails">Event Details:</label>
       <textarea type="text" name="eventDetails" autocomplete="off"></textarea>
       <label for="eventName">Event Organizer Email:</label>
